@@ -1,0 +1,18 @@
+version: "3"
+services:
+  mysql:
+    image: mysql:8.3
+    container_name: con-mysql
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db/mysql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=5020@1223
+      - MYSQL_DATABASE=meubanco
+      - MYSQL_USER=usuario
+      - MYSQL_PASSWORD=Cg5020@1223
+
+volumes:
+  db_data:
