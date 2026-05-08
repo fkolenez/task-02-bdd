@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS bd_biblioteca_univille;
+CREATE DATABASE bd_biblioteca_univille;
 USE bd_biblioteca_univille;
 
 CREATE TABLE categoria (
@@ -47,10 +47,9 @@ CREATE TABLE emprestimo(
     id_funcionario 	INT NOT NULL,
     data_emprestimo 		DATE NOT NULL,
     data_devolucao_prevista DATE NOT NULL,
-    data_devolucao_real 	DATE NOT NULL,
+    data_devolucao_real 	DATE, /* nao precisa ser null pq nao sabemos quando vai ser a data real */
     status ENUM('Em aberto', 'Devolvido', 'Atrasado') NOT NULL,
 	FOREIGN KEY (id_usuario) 		REFERENCES usuario(id) ON UPDATE CASCADE,
 	FOREIGN KEY (id_livro) 			REFERENCES livro(id) ON UPDATE CASCADE,
     FOREIGN KEY (id_funcionario)	REFERENCES funcionario(id) ON UPDATE CASCADE
 );
-	

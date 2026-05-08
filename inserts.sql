@@ -1,14 +1,7 @@
-USE bd_biblioteca_univille;
+USE `bd_biblioteca_univille`;
 
 -- ============================================================
--- CORREÇÃO: data_devolucao_real deve aceitar NULL
--- ============================================================
-ALTER TABLE emprestimo
-    MODIFY COLUMN data_devolucao_real DATE NULL;
-
-
--- ============================================================
--- INSERT: categoria
+-- INSERT: categoria 
 -- ============================================================
 INSERT INTO categoria (nome, descricao) VALUES
 ('Ciência da Computação',   'Algoritmos, programação, sistemas operacionais e afins'),
