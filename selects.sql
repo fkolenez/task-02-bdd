@@ -26,7 +26,7 @@ ORDER BY c.nome, l.titulo;
 # 3. (ORDER BY) Liste todos os usuários do tipo aluno em ordem alfabética pelo nome, 
 # exibindo nome, matrícula, curso e email.
 
-SELECT * FROM usuario ORDER BY nome ASC;
+SELECT * FROM usuario WHERE tipo = 'aluno' ORDER BY nome ASC;
 
 # 4. (Agregação) Mostre quantos empréstimos cada usuário já realizou, exibindo o nome e a matrícula.
 # Ordene do usuário com mais empréstimos para o com menos.
